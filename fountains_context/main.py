@@ -1,6 +1,17 @@
 try:
-    from OpenGL.GL import *
-    from OpenGL.GLUT import *
+    from OpenGL.GL import GL_POINT_SMOOTH, GL_POINTS, glEnable
+    from OpenGL.GLUT import (
+        sys,
+        GLUT_DOUBLE,
+        glutCreateWindow,
+        glutDisplayFunc,
+        glutInit,
+        glutInitDisplayMode,
+        glutInitWindowPosition,
+        glutInitWindowSize,
+        glutMainLoop,
+        glutReshapeFunc,
+    )
 except:
     print "OpenGL wrapper for python not found"
 

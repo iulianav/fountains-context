@@ -1,6 +1,7 @@
-from math import *
+from math import log, sqrt
 
 import random
+
 
 def gaussianDistance(mean, standard_deviation):
     w = 1.0

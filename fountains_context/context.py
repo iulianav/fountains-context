@@ -1,14 +1,39 @@
 try:
-    from OpenGL.GL import *
-    from OpenGL.GLU import *
-    from OpenGL.GLUT import *
+    from OpenGL.GL import (
+        GL_COLOR_BUFFER_BIT,
+        GL_MODELVIEW,
+        GL_POINT_SMOOTH,
+        GL_PROJECTION,
+        glClear,
+        glClearColor,
+        glEnable,
+        glLoadIdentity,
+        glMatrixMode,
+        glViewport,
+    )
+    from OpenGL.GLU import (
+        gluLookAt,
+        gluPerspective,
+    )
+    from OpenGL.GLUT import (
+        GLUT_DOUBLE,
+        glutCreateWindow,
+        glutDisplayFunc,
+        glutInit,
+        glutInitDisplayMode,
+        glutInitWindowPosition,
+        glutInitWindowSize,
+        glutMainLoop,
+        glutPostRedisplay,
+        glutReshapeFunc,
+        glutSwapBuffers,
+    )
 except:
     print "OpenGL wrapper for python not found"
 
 from fountain import Fountain
 from particle import Particle
 from utils import gaussianDistance
-
 
 
 class Context:

@@ -1,7 +1,14 @@
 import random
 
 try:
-    from OpenGL.GL import *
+    from OpenGL.GL import (
+        GL_POINTS,
+        glBegin,
+        glColor3f,
+        glEnd,
+        glPointSize,
+        glVertex3f,
+    )
 except:
     print "OpenGL wrapper for python not found"
 
